@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Stack Session</title>
     <style>
-      div {
-        background-color: red;
-        width: 400px;
-        height: 300px
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        text-decoration:none;
       }
-      span {
-        height: 100px;
+      .parent{
         background-color: yellow;
+        height: 60px;
+        width: 60%;
+        padding: 20px;
       }
+      .child{
+        background-color: red;
+        height: 15px;
+      }
+       
     </style>
   </head>
   <body>
-    <div>I am div</div>
-    <span>I am span</span>
+    <div class="parent">
+      Hi I a parent
+      <div class="child">
+        Hi I am child
+      </div>
+    </div>
+    
   </body>
 </html>
