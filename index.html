@@ -8,33 +8,22 @@
     <style>
       * {
         padding: 0;
-        margin: 0;
+        margin: 4px;
         box-sizing: border-box;
       }
-      .background{
-        background-color: darkcyan;
-      }
-      h2.background{
-        background-color: red;
-        color: #f1f1f1;
-      }
-      h3.background{
-        background-color: darkkhaki;
-      }
-      #unique{
-        background-color: cyan;
+      div.parent div,h1{
+        background-color: lime;
       }
     </style>
   </head>
   <body>
-    <h1 class="background">Heading One</h1>
-    <h2 class="background">Heading Two</h2>
-    <h3 class="background">Heading Three</h3>
-    <hr />
-    <br />
-    <h1>Heading One</h1>
-    <h2 id="unique" class="background">Heading Two</h2>
-    <h3>Heading Three</h3>
-    <span class="background">I am span </span>
+    <div class="parent">
+      <div class="special">I'm a div</div>
+      <h1>I'm heading</h1>
+      <h1>I'm heading</h1>
+      <h2>I'm heading</h2>
+      <h2>I'm heading</h2>
+      <div class="special">I;m a div again</div>
+    </div>
   </body>
 </html>
