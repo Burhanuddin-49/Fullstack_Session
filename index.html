@@ -11,27 +11,30 @@
         margin: 0;
         box-sizing: border-box;
       }
-      .child {
-        background-color: orange;
-        width: 100px;
-        height: 150px;
-        margin: 10px;
+      .background{
+        background-color: darkcyan;
       }
-      .parent {
-        min-height: 500px;
-        background-color: black;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+      h2.background{
+        background-color: red;
+        color: #f1f1f1;
+      }
+      h3.background{
+        background-color: darkkhaki;
+      }
+      #unique{
+        background-color: cyan;
       }
     </style>
   </head>
   <body>
-    <div class="parent">
-      <div class="child"></div>
-      <div style="background-color: red" class="child"></div>
-      <div style="background-color: blueviolet" class="child"></div>
-    </div>
+    <h1 class="background">Heading One</h1>
+    <h2 class="background">Heading Two</h2>
+    <h3 class="background">Heading Three</h3>
+    <hr />
+    <br />
+    <h1>Heading One</h1>
+    <h2 id="unique" class="background">Heading Two</h2>
+    <h3>Heading Three</h3>
+    <span class="background">I am span </span>
   </body>
 </html>
