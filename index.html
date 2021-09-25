@@ -11,29 +11,29 @@
         margin: 4px;
         box-sizing: border-box;
       }
-
-      h2:nth-child(1){
-        padding: 5px;
-        background-color: cyan;
-        color: black;
-        transition-duration: 0.5s;
-        transition-timing-function: linear;
+      div.parent{
+        background-color: black;
+        min-height: 200px;
       }
-      h2:nth-child(2){
-        padding: 5px;
+      div.child{
         background-color: orange;
-        color: #f1f1f1;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        transition-duration: 2s;
+        transition-timing-function: ease-out;
       }
-      h2:hover{
-        background-color: orangered;
-        cursor: pointer;
+      div.parent:hover div.child{
+        background-color: cyan;
+        transform: translateX(500px);
+        /* transform: rotateY(180deg); */
+
       }
     </style>
   </head>
   <body>
-    <h2>I'm heading</h2>
-    <h2>I'm heading</h2>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
   </body>
 </html>
