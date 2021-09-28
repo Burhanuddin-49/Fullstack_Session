@@ -1,38 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Poppins";
-    color: unset;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins";
+  color: unset;
 }
 
 header {
-    background-image: url('../images/day.jpeg');
-    height: 300px;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../images/day.jpeg");
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 
-
-/* footer styles */
-
 img.social {
-    width: 20px;
+    width: 30px;
     margin: 0px 10px;
 }
 
-footer {
+/* footer style */
+
+footer{
     background-color: #f1f1f1;
-    color: #4f4dde;
+    color: purple;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     font-size: 1.2rem;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
 }
