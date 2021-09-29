@@ -11,7 +11,35 @@
 
   <body>
     <header></header>
-
+    <section class="list-container">
+      <div class="container">
+        <h2>
+          Todo List <input type="checkbox" id="switch" /><label
+            class="switch-label"
+            for="switch"
+            >Toggle</label
+          >
+        </h2>
+        <div class="list">
+          <div class="list-item">
+            <input placeholder="Add a task to the List" type="text" />
+            <i class="fas fa-plus"></i>
+          </div>
+          <ol class="todo-list">
+            <div class="taskbar list-item">
+              <div>5 items left</div>
+              <div style="display: flex">
+                <div class="active" id="all">All</div>
+                <div id="pending">Pending</div>
+                <div id="complete">Completed</div>
+              </div>
+              <div class="clear">Clear</div>
+            </div>
+            <div class="items"></div>
+          </ol>
+        </div>
+      </div>
+    </section>
     <footer>
       <div>
         <a href="#">Burhanuddin</a>
