@@ -5,28 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assests/css/styles.css" />
-    <title>Todo list</title>
-    <style></style>
+    <title>CSS & JS</title>
+    <style>
+      div.parent {
+        display: flex;
+        align-items: stretch;
+        background: #111;
+        height: 400px;
+      }
+      div.child {
+        background-color: #ffbf00;
+        flex-basis: 80%;
+      }
+      div.sidebar {
+        background-color: crimson;
+        flex-basis: 20%;
+      }
+      @media (max-width: 450px) {
+        div.sidebar {
+          animation: 5s expand linear infinite;
+        }
+        div.child {
+          flex-basis: 100%;
+        }
+      }
+
+      @keyframes expand {
+        0% {
+          flex-basis: 0%;
+        }
+        100% {
+          flex-basis: 50%;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <header></header>
-
-    <footer>
-      <div>
-        <a href="#">Burhanuddin</a>
-      </div>
-      <div>
-        <a href="#">
-          <img class="social" src="./assests/images/github.png" alt="" />
-        </a>
-        <a href="#">
-          <img class="social" src="./assests/images/instagram.png" alt="" />
-        </a>
-        <a href="#">
-          <img class="social" src="../assests/images/linkedin.png" alt="" />
-        </a>
-      </div>
-    </footer>
+    <div class="parent">
+      <div class="sidebar"></div>
+      <div class="child"></div>
+    </div>
   </body>
 </html>

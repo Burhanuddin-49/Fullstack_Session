@@ -7,30 +7,3 @@
   font-family: "Poppins";
   color: unset;
 }
-
-header {
-  background-image: url("../images/day.jpeg");
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-}
-
-img.social {
-    width: 30px;
-    margin: 0px 10px;
-}
-
-/* footer style */
-
-footer{
-    background-color: #f1f1f1;
-    color: purple;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
