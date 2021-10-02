@@ -1,18 +1,6 @@
-var a = 2
-var b = 10
+var heading = document.getElementById('heading')
+var para = document.getElementsByClassName('para')
+var tags = document.getElementsByTagName('a')
+var query = document.querySelector('.para')
 
-console.log('a+b=',a+b)
-console.log('a-b=',a-b)
-console.log('a*b=',a*b)
-console.log('a/b=',a/b)
-console.log('a%b',a%b)
-
-
-// Boolean
-console.warn(a == b);
-console.log(a > b)
-console.log(a < b)
-console.error(a != b)
-
-var f = '10'
-console.log(b + f)
+console.log(query)
