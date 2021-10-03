@@ -16,9 +16,11 @@
 //     var sum = a+b
 //     return sum
 // }
-var add = (a=10,b=20) => {
-    var sum = a+b
-    return sum
-}
+
+// var add = (a=10,b=20) => {
+//     return a-b
+// }
+
+var add = (a=10,b=20) => a-b
 
 console.log(add())
