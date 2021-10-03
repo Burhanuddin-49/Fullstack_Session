@@ -1,14 +1,24 @@
-var list = document.querySelector('ul')
+// function greet(name,age){
+//     console.log('Hey '+name+ ' Your age is '+age)
+// }
 
-var arr = ['Go the GYM', 'cook oat', 'Eat']
+// // greet('Burhanuddin',20)
 
-arr.push('Complete the assignment')
+// function add(a,b){
+//     // console.log(a+b)
+//     var sum = a+b
+//     return sum
+// }
+// var result = add(10,20)
 
-for(var i=0; i<arr.length;i++){
 
-    var element= document.createElement('li')
-    var tetxtNode = document.createTextNode(arr[i])
-    element.appendChild(tetxtNode)
-    list.appendChild(element)
-
+// var add = function (a=10, b=20){
+//     var sum = a+b
+//     return sum
+// }
+var add = (a=10,b=20) => {
+    var sum = a+b
+    return sum
 }
+
+console.log(add())
