@@ -1,7 +1,29 @@
-var arr = [1,2,3,4,5,6,7,8]
+var button = document.querySelector("button");
+var input = document.querySelector("input");
+var list = document.querySelector("ul");
 
-var new_arr = arr.filter((element, index) => {
-    if (element%2==0) return true
-})
+var chores = [];
 
-console.log(new_arr)
+var deleteitem = (value) => {
+  const index = chores.indexOf(value);
+  chores.splice(index, 1);
+  console.log(chores);
+};
+
+const callbackfunc = (event) => {
+  const inputvalue = input.value;
+  if (chores.includes(inputvalue)) {
+    console.log("already exits");
+  } else {
+    chores.push(inputvalue);
+    const element = document.createElement("li");
+    const textNode = document.createTextNode(inputvalue);
+    element.appendChild(textNode);
+    list.appendChild(element);
+    element.addEventListener("click", (e) => {
+      e.target.remove();
+    });
+  }
+};
+
+button.addEventListener("click", callbackfunc);
