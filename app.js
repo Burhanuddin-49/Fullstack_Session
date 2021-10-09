@@ -1,2 +1,11 @@
-var data = fetch("https://jsonplaceholder.typicode.com/todos/10");
-console.log(data);
+let value =new Promise((resolve,reject)=>{
+  setTimeout(()=> {
+    resolve('Hello')
+  },1000)
+})
+
+console.log(value)
+
+setTimeout(()=>{
+  console.log(value)
+},2000)
