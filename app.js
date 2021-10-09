@@ -1,9 +1,2 @@
-const print = () => {
-  var Name = "Mercedes";
-  if(true){
-      console.log(Name)
-  }
-  return Name;
-};
-
-print()
+var data = fetch("https://jsonplaceholder.typicode.com/todos/10");
+console.log(data);
