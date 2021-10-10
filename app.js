@@ -1,11 +1,5 @@
-let value =new Promise((resolve,reject)=>{
-  setTimeout(()=> {
-    resolve('Hello')
-  },1000)
-})
-
-console.log(value)
-
-setTimeout(()=>{
-  console.log(value)
-},2000)
+let response = fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((book) => {
+    console.log(book);
+  });
