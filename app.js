@@ -1,16 +1,12 @@
-// fetch("https://jsonplaceholder.typicode.com/users")
-//   .then((resp) => resp.json())
-//   .then((data) => {
-//     console.log(data);
-//     data.forEach((user) => {
-//         console.log(data)
-//     });
-//   });
+let greet = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Welcome");
+  }, 3000);
+});
 
-const fetchData = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await response.json();
-  console.log(data);
-};
-
-fetchData()
+greet.then(value=>{
+  console.log(value)
+  return 'welcom Agian'
+}).then(newValue=>{
+  console.log(newValue)
+})
