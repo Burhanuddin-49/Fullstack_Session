@@ -1,10 +1,8 @@
-const button = document.querySelector('button')
-const input = document.querySelector('input')
-const div = document.querySelector('div')
+const path = require('path')
 
-div.innerHTML = localStorage.getItem('InputValue')
+console.log(path.resolve('./app.js'))
+console.log(path.relative("/",'./app.js'))
+console.log(path.extname('./app.js'))
+console.log(path.dirname('./temp/app.js'))
 
-button.addEventListener('click',(req, res)=> {
-    localStorage.setItem('InputValue', [1,2,3,4,5])
-    div.innerHTML = input.value
-})
+console.log(__dirname, 'app.js')
