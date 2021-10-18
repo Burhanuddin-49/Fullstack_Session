@@ -1,12 +1,10 @@
-let greet = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Welcome");
-  }, 3000);
-});
+const button = document.querySelector('button')
+const input = document.querySelector('input')
+const div = document.querySelector('div')
 
-greet.then(value=>{
-  console.log(value)
-  return 'welcom Agian'
-}).then(newValue=>{
-  console.log(newValue)
+div.innerHTML = localStorage.getItem('InputValue')
+
+button.addEventListener('click',(req, res)=> {
+    localStorage.setItem('InputValue', [1,2,3,4,5])
+    div.innerHTML = input.value
 })
