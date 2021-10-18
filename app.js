@@ -1,8 +1,12 @@
-const path = require('path')
+const fs = require('fs')
 
-console.log(path.resolve('./app.js'))
-console.log(path.relative("/",'./app.js'))
-console.log(path.extname('./app.js'))
-console.log(path.dirname('./temp/app.js'))
+// fs.readFile('./test.txt', (error,data)=>{
+//     if(error) console.log(error)
+//     else console.log(data.toString())
+// })
 
-console.log(__dirname, 'app.js')
+// console.log(fs.readFileSync('./test.txt','utf8'))
+
+fs.writeFile('./test.txt', "write text here",(error)=>{
+    if(error) console.log(error)
+})
