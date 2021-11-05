@@ -1,15 +1,41 @@
-const express = require('express')
-const PORT = 3000
-const app = express()
+const express = require("express");
+const PORT = 3000;
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
-app.post('/signup',(req,res)=>{
-    console.log(req.body)
-    res.send('dadada')
-})
+let products = [
+  { name: "iPhone Case", price: "999" },
+  { name: "iPhone Case", price: "1999" },
+  { name: "iPhone Case", price: "1499" },
+];
 
-app.listen(PORT,()=>{
-    console.log(`server running at port ${PORT}`)
-})
+// --------------Middlewares--------------------
+const validator = (req, res, next) => {
+  const { name, price } = req.body;
+  if (!name || !price) res.json({ error: "Validation failed" });
+  else next();
+};
 
+// --------------PUBLIC Routes--------------------
+// GET ROUTE
+// Send all products
+app.get("/products", (req, res) => {
+  res.json({ products });
+});
+
+// -----------PRIVATE Routes-------------------
+
+app.post("/products/add", validator,(req, res) => {
+  const { name, price } = req.body;
+
+  products.push({
+    name,
+    price,
+  });
+  res.send({ products });
+});
+
+app.listen(PORT, () => {
+  console.log(`server running at port ${PORT}`);
+});
