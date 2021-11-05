@@ -4,6 +4,8 @@ const app = express();
 
 app.use(express.json());
 
+const token = "TOP_SECRET";
+
 let products = [
   { name: "iPhone Case", price: "999" },
   { name: "iPhone Case", price: "1999" },
@@ -17,6 +19,14 @@ const validator = (req, res, next) => {
   else next();
 };
 
+const isAuthorised = (req, res, next) => {
+  const { email, password } = req.body;
+  if (req.headers.authorisation === token) next();
+  else {
+    res.json({ error: "UNAUTHORISED" });
+  }
+};
+
 // --------------PUBLIC Routes--------------------
 // GET ROUTE
 // Send all products
@@ -26,7 +36,7 @@ app.get("/products", (req, res) => {
 
 // -----------PRIVATE Routes-------------------
 
-app.post("/products/add", validator,(req, res) => {
+app.post("/products/add", isAuthorised, validator, (req, res) => {
   const { name, price } = req.body;
 
   products.push({
@@ -34,6 +44,16 @@ app.post("/products/add", validator,(req, res) => {
     price,
   });
   res.send({ products });
+});
+
+// --------------Authenticaation-------------
+app.post("/auth", (req, res) => {
+  const { email, password } = req.body;
+  if (email === "admin@gmail.com" && password === "password") {
+    res.send({ token });
+  } else {
+    res.send({ message: "UNAUTHORISED" });
+  }
 });
 
 app.listen(PORT, () => {
